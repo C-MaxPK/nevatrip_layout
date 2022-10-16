@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.cards {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+@media (min-width: 1200px) {
+  .cards {
+    margin-top: 20px;
+    gap: 60px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 341px;
+  border: 0.3px solid #828282;
+  border-radius: 16px;
+}
+@media (min-width: 1200px) {
+  .card {
+    width: 1106px;
+    flex-direction: row;
+    gap: 23px;
+    border: 0.5px solid #8E8E8E;
+    border-radius: 15px;
+  }
+}
+.card-img {
+  height: 220px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 1200px) {
+  .card-img {
+    min-width: 473px;
+    height: auto;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: inherit;
+  }
+}
+.card-img.img1 {
+  background-image: url("../img/img4.jpg");
+}
+.card-img.img2 {
+  background-image: url("../img/img1.jpg");
+}
+.card-img.img3 {
+  background-image: url("../img/img2.jpg");
+}
+.card-img.img4 {
+  background-image: url("../img/img3.jpg");
+}
+.card-img__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99px;
+  height: 35px;
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #3E3E3E;
+  background: #FED74B;
+}
+@media (min-width: 1200px) {
+  .card-img__label {
+    width: 154px;
+    height: 42px;
+    font-size: 16px;
+  }
+}
+.card-img__label.label-blue {
+  background: #099CE8;
+  color: #FFFFFF;
+}
+.card-content {
+  margin: 0 12px 19px;
+}
+@media (min-width: 1200px) {
+  .card-content {
+    margin: 16px 36px 32px 0;
+  }
+  .card-content__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.card-content__duration {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 9px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #9E9E9E;
+}
+@media (min-width: 1200px) {
+  .card-content__duration {
+    font-size: 14px;
+    gap: 6px;
+  }
+}
+.card-content__header {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #404040;
+}
+@media (min-width: 1200px) {
+  .card-content__header {
+    margin-bottom: 11px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 34px;
+    color: #000000;
+  }
+}
+.card-content__desc-list {
+  margin-left: 20px;
+  list-style-image: url("../img/check-mark.svg");
+  font-size: 14px;
+  line-height: 20px;
+  color: #4B4B4B;
+}
+@media (min-width: 1200px) {
+  .card-content__desc-list {
+    margin-left: 23px;
+    font-size: 18px;
+    color: #343434;
+  }
+}
+.card-content__desc-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.card-content__desc-item:last-child {
+  position: relative;
+}
+.card-content__time-list {
+  margin-top: 10px;
+  display: flex;
+  gap: 4px;
+  max-width: 310px;
+  flex-wrap: wrap;
+  list-style-image: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: #343434;
+}
+@media (min-width: 1200px) {
+  .card-content__time-list {
+    font-size: 16px;
+    gap: 6px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-content__time-list {
+    position: absolute;
+    top: -10px;
+    left: 235px;
+  }
+}
+.card-content__time-item {
+  padding: 3px 15px;
+  background: #D9E8FF;
+  border-radius: 11px;
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .card-content__time-item {
+    background: #C5DCFF;
+  }
+}
+.card-content__time-item.bg-blue {
+  background: #6BA6FF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.card-content__time-item.hidden {
+  display: none;
+}
+.card-content__time-item:hover {
+  background: #a6c6f5;
+}
+.card-content__bottom {
+  margin-top: 35px;
+  padding: 0 7px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  .card-content__bottom {
+    margin-top: 50px;
+    padding: 0;
+    justify-content: start;
+  }
+}
+.card-content__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media (min-width: 1200px) {
+  .card-content__price {
+    margin-right: 12px;
+  }
+}
+.card-content__price-current {
+  font-size: 30px;
+  line-height: 20px;
+}
+@media (min-width: 1200px) {
+  .card-content__price-current {
+    font-size: 36px;
+  }
+}
+.card-content__price-jetty {
+  font-size: 10px;
+  line-height: 20px;
+}
+@media (min-width: 1200px) {
+  .card-content__price-jetty {
+    font-size: 14px;
+  }
+}
+.card-content__btn-more {
+  font-size: 14px;
+  line-height: 20px;
+  color: #404040;
+  cursor: pointer;
+  padding: 12px 41px;
+  background: #FED74B;
+  border: 0.5px solid #CBA500;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+@media (min-width: 1200px) {
+  .card-content__btn-more {
+    font-size: 18px;
+    color: #292929;
+    background: #FFD83C;
+    border-radius: 23px;
+    padding: 16px 42px;
+  }
+}
+.card-content__btn-more:hover {
+  transform: scale(1.05);
+}/*# sourceMappingURL=style.css.map */
